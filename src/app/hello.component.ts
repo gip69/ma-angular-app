@@ -15,7 +15,4 @@ import { Component, Input } from '@angular/core';
 })
 export class HelloComponent {
   @Input() name: string;
-  ngOnInit() {
-    console.log('on init');
-  }
 }
