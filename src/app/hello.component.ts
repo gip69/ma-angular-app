@@ -1,5 +1,7 @@
 import { Component, Input, SimpleChange } from '@angular/core';
 
+const USERS = [{ name: 'Fritz' }, { name: 'Hans' }, { name: 'Peter' }];
+
 @Component({
   selector: 'hello',
   templateUrl: './hello.component.html',
@@ -7,6 +9,8 @@ import { Component, Input, SimpleChange } from '@angular/core';
 })
 export class HelloComponent {
   @Input() name: string;
+  // @Output() countUsers = new
+  users = USERS;
 
   constructor() {
     console.log(this.name); // undefined
@@ -26,5 +30,13 @@ export class HelloComponent {
 
   ngOnDestroy() {
     console.log('on destroy: ' + this.name);
+  }
+
+  ngDoCheck() {
+    console.log('changed');
+  }
+
+  doChanges() {
+    console.log('do change');
   }
 }
