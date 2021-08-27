@@ -11,6 +11,7 @@ export class HelloComponent {
   @Input() name: string;
   // @Output() countUsers = new
   users = USERS;
+  showList: boolean = false;
 
   constructor() {
     console.log(this.name); // undefined
@@ -38,5 +39,6 @@ export class HelloComponent {
 
   doChanges() {
     console.log('do change');
+    this.showList = this.showList ? false : true;
   }
 }

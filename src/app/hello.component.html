@@ -1,3 +1,5 @@
 <h1>Hello {{ name }}!</h1>
-<div *ngFor='let user of users'>Hey user {{user.name}}</div>
+<div *ngIf="showList">
+  <div *ngFor="let user of users">Hey user {{user.name}}</div>
+</div>
 <button (click)="doChanges()">change</button>
