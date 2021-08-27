@@ -11,6 +11,7 @@ export class HelloComponent {
   @Input() name: string;
   // @Output() countUsers = new
   users = USERS;
+  newUser: string;
   showList: boolean = false;
 
   constructor() {
